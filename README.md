@@ -5,11 +5,38 @@ An interactive Streamlit web application allows users to search for a movie and 
 
 Features:
 
-Content-based movie recommendations using TF-IDF and cosine similarity
+a)Content-based movie recommendations using TF-IDF and cosine similarity
+b)Uses movie metadata such as genres, overview, tagline, and title
+c)Supports movies from multiple datasets (Hollywood and Bollywood)
+d)Handles approximate user input using string matching
+e)Interactive and user-friendly Streamlit interface
 
-Uses movie metadata such as genres, overview, tagline, and title
+How It Works:
 
-Supports movies from multiple datasets (Hollywood and Bollywood)
+a)Movie metadata is cleaned and combined into a single text feature
+b)Text data is converted into numerical vectors using TF-IDF Vectorization
+c)Cosine similarity is used to compute similarity between movies
+d)Based on the user’s input movie, the system recommends the most similar movies
 
-Handles approximate user input using string matching
-Interactive and user-friendly Streamlit interface
+Dataset:
+
+1) TMDB 5000 Movies Dataset
+2) IMDB Movies Dataset (Bollywood)
+The datasets are combined and aligned to ensure consistent feature usage.
+
+Technologies Used
+
+Programming Language: 
+* Python
+* Libraries & Frameworks:
+* Pandas
+* NumPy
+* Scikit-learn
+* Streamlit
+* NLP Techniques:
+* TF-IDF Vectorization
+* Cosine Similarity
+
+Utilities:
+difflib (for approximate string matching)
+
